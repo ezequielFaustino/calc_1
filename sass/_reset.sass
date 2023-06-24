@@ -1,0 +1,11 @@
+@use 'variables'
+@use 'mixins'
+
+html, body
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  background-color: variables.$bg-color
+  @include mixins.flex-center
+  padding: 3em
+  font-family: 'Nunito', sans-serif

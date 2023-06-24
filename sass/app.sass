@@ -1,2 +1,57 @@
 @use 'variables'
 @use 'reset'
+@use 'mixins'
+
+#calc
+  min-width: 25em
+  padding: .5em
+  background-color: variables.$second-bg-color
+  display: flex
+  flex-direction: column
+
+  h3
+    font-size: 0.9rem
+    font-weight: 300
+    color: variables.$text-color
+
+  #operations
+    text-align: right
+
+    #previous-operations, #current-operation
+      overflow-wrap: break-word
+      padding: .2em
+      min-height: 1.6em
+    
+    #previous-operations
+      color: variables.$second-text-color
+    
+    #current-operation
+      font-size: 3rem
+      font-weight: 700
+  
+  #buttons-container
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 0.1875em
+
+    button
+      border: 1px solid transparent
+      border-radius: 0
+      min-height: 4em
+      font-size: 1.2rem
+      background-color: variables.$bg-btn-color
+      cursor: pointer
+
+      &:hover
+        background-color: variables.$third-bg-btn-color
+        border-color: variables.$border-color
+
+    .number
+      background-color: variables.$second-bg-btn-color
+    
+    #equal-btn
+      grid-column: span 2
+      background-color: variables.$third-bg-color
+      &:hover
+        background-color: #d62e58
+

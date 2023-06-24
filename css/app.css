@@ -1,0 +1,68 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #171717;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3em;
+  font-family: "Nunito", sans-serif;
+}
+
+#calc {
+  min-width: 25em;
+  padding: 0.5em;
+  background-color: #EDEDED;
+  display: flex;
+  flex-direction: column;
+}
+#calc h3 {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: #444444;
+}
+#calc #operations {
+  text-align: right;
+}
+#calc #operations #previous-operations, #calc #operations #current-operation {
+  overflow-wrap: break-word;
+  padding: 0.2em;
+  min-height: 1.6em;
+}
+#calc #operations #previous-operations {
+  color: #777;
+}
+#calc #operations #current-operation {
+  font-size: 3rem;
+  font-weight: 700;
+}
+#calc #buttons-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.1875em;
+}
+#calc #buttons-container button {
+  border: 1px solid transparent;
+  border-radius: 0;
+  min-height: 4em;
+  font-size: 1.2rem;
+  background-color: #dbdbdc;
+  cursor: pointer;
+}
+#calc #buttons-container button:hover {
+  background-color: #bababb;
+  border-color: #998;
+}
+#calc #buttons-container .number {
+  background-color: #f3f3f4;
+}
+#calc #buttons-container #equal-btn {
+  grid-column: span 2;
+  background-color: #da0037;
+}
+#calc #buttons-container #equal-btn:hover {
+  background-color: #d62e58;
+}
+
+/*# sourceMappingURL=app.css.map */
