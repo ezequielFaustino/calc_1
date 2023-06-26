@@ -18,7 +18,6 @@ buttons.forEach((button) => {
       calc.addDigit(value);
       
     } else {
-      console.log(typeof value);
       calc.processOperation(value);
     }
 

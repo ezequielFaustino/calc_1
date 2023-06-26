@@ -20,9 +20,9 @@ export class Calculator {
   // processar todas as operacoes da calculadora
   processOperation = (operation) => {
     // verificar se valor atual esta vazio
-    if(this._currentOperationText.innerText === "" && operation !== "C") {
+    if (this._currentOperationText.innerText === "" && operation !== "C") {
       // muda operacao
-      if(this._previousOperationText.innerText !== "") {
+      if (this._previousOperationText.innerText !== "") {
         this._changeOperation(operation);
       }
       return;
@@ -34,10 +34,34 @@ export class Calculator {
     let current = +this._currentOperationText.innerText;
 
     // switch
-    switch(operation) {
+    switch (operation) {
       case "+":
         operationValue = previous + current;
         this._updateScreen(operationValue, operation, current, previous);
+        break;
+      case "-":
+        operationValue = previous - current;
+        this._updateScreen(operationValue, operation, current, previous);
+        break;
+      case "*":
+        operationValue = previous * current;
+        this._updateScreen(operationValue, operation, current, previous);
+        break;
+      case "/":
+        operationValue = previous / current;
+        this._updateScreen(operationValue, operation, current, previous);
+        break;
+      case "DEL":
+        this._processDelOperator();
+        break;
+      case "CE":
+        this._processClearCurrentOperator();
+        break;
+      case "C":
+        this._processClearOperator();
+        break;
+      case "=":
+        this._processEqualOperator();
         break;
       default:
         return;
@@ -71,6 +95,26 @@ export class Calculator {
       return;
     }
 
-    this._previousOperationText.innerText = this._previousOperationText.innerText.slice(0, -1) + operation;
+    this._previousOperationText.innerText =
+      this._previousOperationText.innerText.slice(0, -1) + operation;
   };
+
+  _processDelOperator = () => {
+    this._currentOperationText.innerText =
+      this._currentOperationText.innerText.slice(0, -1);
+  };
+
+  _processClearCurrentOperator = () => {this._currentOperationText.innerText = "";}
+
+  _processClearOperator = () => {
+    this._currentOperationText.innerText = "";
+    this._previousOperationText.innerText = "";
+  }
+
+  _processEqualOperator = () => {
+    let operation = this._previousOperationText.innerText.split(" ")[1];
+
+    this.processOperation(operation);
+  }
+
 }
