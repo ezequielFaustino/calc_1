@@ -12,12 +12,15 @@ let calc = new Calculator(previousOperations, currentOperation);
 // Eventos
 buttons.forEach((button) => {
   button.addEventListener("click", (e) => {
-    const value = e.target.innerText;
+    let value = e.target.innerText;
+    let valueNumber = +value
+    
 
-    if(+value >= 0 || value === ".") {
-      console.log(value);
-      calc.addDigit(value)
+    if(valueNumber >= 0 || value === ".") {
+      calc.addDigit(value);
+      
     } else {
+      console.log(typeof value);
       calc.processOperation(value);
     }
 
