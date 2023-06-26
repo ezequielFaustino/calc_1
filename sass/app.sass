@@ -9,6 +9,9 @@
   display: flex
   flex-direction: column
 
+  @include mixins.mobile
+    min-width: 20em
+
   h3
     font-size: 0.9rem
     font-weight: 300

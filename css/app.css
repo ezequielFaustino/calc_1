@@ -17,6 +17,11 @@ html, body {
   display: flex;
   flex-direction: column;
 }
+@media screen and (max-width: 26.5em) {
+  #calc {
+    min-width: 20em;
+  }
+}
 #calc h3 {
   font-size: 0.9rem;
   font-weight: 300;
