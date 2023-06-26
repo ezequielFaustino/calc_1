@@ -1,4 +1,4 @@
 # calc_1
 
 ### Métodos utilizado no array
-- includes:
+- includes: checa se um array de string contém determina string;
