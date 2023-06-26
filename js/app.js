@@ -13,10 +13,8 @@ let calc = new Calculator(previousOperations, currentOperation);
 buttons.forEach((button) => {
   button.addEventListener("click", (e) => {
     let value = e.target.innerText;
-    let valueNumber = +value
     
-
-    if(valueNumber >= 0 || value === ".") {
+    if(value >= 0 || value === ".") { 
       calc.addDigit(value);
       
     } else {
