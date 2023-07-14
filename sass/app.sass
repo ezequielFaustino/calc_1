@@ -5,8 +5,47 @@
 .calc
   background-color: variables.$clr-primary-300
   padding: 2rem
-  
+
   position: absolute
   top: 50%
   left: 50%
   transform: translate(-50%, -50%)
+
+  h3
+    font-weight: 300
+    font-size: variables.$fs-300
+    margin-bottom: 1.25rem
+
+  .operations
+    @include mixins.flex-end
+    flex-flow: row wrap
+    margin-bottom: 1.25rem
+
+    font-weight: 300
+    font-size: variables.$fs-300
+
+  div[data-js="result"]
+    font-weight: 500
+    font-size: variables.$fs-500
+    @include mixins.flex-end
+    margin: 0 0 1.25rem 0
+
+  div[data-js="buttons-container"]
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+
+    button
+      padding: 2rem
+      background-color: variables.$clr-secondary-300
+      color: variables.$clr-primary-300
+      cursor: pointer
+
+    .number
+      font-weight: 500
+      background-color: variables.$clr-primary-300
+      color: variables.$clr-primary-500
+      
+
+    button[data-js="equal-btn"]
+      grid-column: span 2
+      background-color: variables.$clr-secondary-500

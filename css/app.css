@@ -29,5 +29,44 @@ h3 {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.calc h3 {
+  font-weight: 300;
+  font-size: 1rem;
+  margin-bottom: 1.25rem;
+}
+.calc .operations {
+  display: flex;
+  justify-content: flex-end;
+  flex-flow: row wrap;
+  margin-bottom: 1.25rem;
+  font-weight: 300;
+  font-size: 1rem;
+}
+.calc div[data-js=result] {
+  font-weight: 500;
+  font-size: 1.25rem;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 0 1.25rem 0;
+}
+.calc div[data-js=buttons-container] {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.calc div[data-js=buttons-container] button {
+  padding: 2rem;
+  background-color: #444444;
+  color: #EDEDED;
+  cursor: pointer;
+}
+.calc div[data-js=buttons-container] .number {
+  font-weight: 500;
+  background-color: #EDEDED;
+  color: #171717;
+}
+.calc div[data-js=buttons-container] button[data-js=equal-btn] {
+  grid-column: span 2;
+  background-color: #da0037;
+}
 
 /*# sourceMappingURL=app.css.map */

@@ -18,9 +18,12 @@
   <div class="calc">
     <h3>Calculadora</h3>
     <div class="operations">
-      <div data-js="previous-operations"></div>
-      <div data-js="current-operation"></div>
+      <div data-js="previous-operations">10+</div>
+      <div data-js="current-operation">10</div>
+
     </div>
+
+    <div data-js="result">20</div>
 
     <div data-js="buttons-container">
       <button>CE</button>
@@ -41,7 +44,7 @@
       <button>+</button>
       <button class="number">0</button>
       <button class="number">.</button>
-      <button id="equal-btn">=</button>
+      <button data-js="equal-btn">=</button>
     </div>
   </div>
   <script type="module" src="js/app.js"></script>
