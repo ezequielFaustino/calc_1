@@ -1,49 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculadora - Ezequiel</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/app.css" />
-  </head>
-  <body>
-    <div id="calc">
-      <h3>Calculadora</h3>
-      <div id="operations">
-        <div id="previous-operations"></div>
-        <div id="current-operation"></div>
-      </div>
 
-      <div id="buttons-container">
-        <button>CE</button>
-        <button>C</button>
-        <button>DEL</button>
-        <button>/</button>
-        <button class="number">7</button>
-        <button class="number">8</button>
-        <button class="number">9</button>
-        <button>*</button>
-        <button class="number">4</button>
-        <button class="number">5</button>
-        <button class="number">6</button>
-        <button>-</button>
-        <button class="number">1</button>
-        <button class="number">2</button>
-        <button class="number">3</button>
-        <button>+</button>
-        <button class="number">0</button>
-        <button class="number">.</button>
-        <button id="equal-btn">=</button>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;500&display=swap" rel="stylesheet">
+  <!-- CSS do projeto -->
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+
+<body>
+  <div class="calc">
+    <h3>Calculadora</h3>
+    <div class="operations">
+      <div data-js="previous-operations"></div>
+      <div data-js="current-operation"></div>
     </div>
-    <script type="module" src="js/app.js"></script>
-  </body>
+
+    <div data-js="buttons-container">
+      <button>CE</button>
+      <button>C</button>
+      <button>DEL</button>
+      <button>/</button>
+      <button class="number">7</button>
+      <button class="number">8</button>
+      <button class="number">9</button>
+      <button>*</button>
+      <button class="number">4</button>
+      <button class="number">5</button>
+      <button class="number">6</button>
+      <button>-</button>
+      <button class="number">1</button>
+      <button class="number">2</button>
+      <button class="number">3</button>
+      <button>+</button>
+      <button class="number">0</button>
+      <button class="number">.</button>
+      <button id="equal-btn">=</button>
+    </div>
+  </div>
+  <script type="module" src="js/app.js"></script>
+</body>
+
 </html>
